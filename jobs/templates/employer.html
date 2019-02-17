@@ -1,10 +1,10 @@
 {% extends 'layout.html'%}
+
 {% block content %}
   <div>
     <h1>{{ employer['name'] }}</h1>
     <div class="description">
       <p>{{ employer['description'] }}</p>
-
     </div>
   </div>
   <h2>Jobs</h2>
@@ -12,10 +12,7 @@
 
   <h2>Reviews</h2>
 
-      {% for in review in reviews%}
-
-      {% endfor %}
-
+    {% for in review in reviews%}
     <div class="box">
       <article class="media">
         <div class="media-left">
@@ -35,9 +32,8 @@
         </div>
       </article>
     </div>
-    {# TODO: Remove comment and end for loop
-      {% %}
-    #}
+    {% endfor %}
+
   <div class="columns">
     <div class="column">
       <a class="button is-info is-pulled-right">Create Review</a>
